@@ -1,97 +1,108 @@
-Test Cases — E-commerce Website (MAKEUP)
+Test Cases & Execution — E-commerce Website (MAKEUP)
+TC_01 — Verify homepage loading
 
-TC_01 — Verify search functionality with valid keyword
+Preconditions: Website URL is доступний.
+Steps: Open homepage.
+Expected Result: Homepage loads successfully without errors.
 
-Preconditions:
-User is on the homepage.
+Priority: High
+Status: ✅ Pass
 
+TC_02 — Verify search with valid input
+
+Preconditions: User is on homepage.
 Steps:
 
-Enter a valid product name.
+Enter valid product name.
 
 Click Search.
 
-Expected Result:
-Relevant products are displayed.
+Expected Result: Relevant products are displayed.
 
 Priority: High
-Type: Functional
+Status: ✅ Pass
 
-TC_02 — Verify search with invalid input
+TC_03 — Verify product details page
 
-Preconditions:
-User is on the homepage.
+Preconditions: Search results are displayed.
+Steps: Click on any product.
 
-Steps:
-
-Enter invalid characters (e.g., "@@@###").
-
-Click Search.
-
-Expected Result:
-System displays "No results found" message.
-
-Priority: Medium
-Type: Negative
-
-TC_03 — Verify adding product to cart
-
-Preconditions:
-Product is in stock.
-
-Steps:
-
-Click "Add to Cart".
-
-Expected Result:
-Product is added to cart successfully.
+Expected Result: Product page opens with description, price, and images.
 
 Priority: High
-Type: Functional
+Status: ✅ Pass
 
-TC_04 — Verify adding out-of-stock product
+TC_04 — Verify adding product to cart
 
-Preconditions:
-Product is marked as "Out of stock".
+Preconditions: Product is in stock.
+Steps: Click "Add to Cart".
 
-Steps:
-
-Click "Add to Cart".
-
-Expected Result:
-System prevents adding product and displays message.
+Expected Result: Product is added to cart successfully.
 
 Priority: High
-Type: Negative
+Status: ✅ Pass
 
 TC_05 — Verify removing product from cart
 
-Preconditions:
-Product is in cart.
+Preconditions: Product is in cart.
+Steps: Click Remove button.
 
-Steps:
-
-Click Remove button.
-
-Expected Result:
-Product is removed from cart.
+Expected Result: Product is removed from cart.
 
 Priority: Medium
-Type: Functional
+Status: ✅ Pass
 
-TC_06 — Verify no critical errors in browser console
+TC_06 — Verify checkout page opening
 
-Preconditions:
-Website is open.
+Preconditions: Product is in cart.
+Steps: Click Checkout.
 
+Expected Result: Checkout page opens successfully.
+
+Priority: High
+Status: ✅ Pass
+
+TC_07 — Verify search with invalid characters
+
+Preconditions: User is on homepage.
 Steps:
 
-Open DevTools console.
+Enter "@@@###" in search field.
+
+Click Search.
+
+Expected Result: System displays "No results found".
+
+Actual Result: System displays 112 products.
+
+Priority: Medium
+Status: ❌ Fail
+
+👉 Bug Report created.
+
+TC_08 — Verify adding out-of-stock product
+
+Preconditions: Product marked as "Out of stock".
+Steps: Click "Add to Cart".
+
+Expected Result: System prevents adding product and shows message.
+
+Priority: High
+Status: ✅ Pass
+
+TC_09 — Verify browser console errors
+
+Preconditions: Website is open.
+Steps:
+
+Open Chrome DevTools.
 
 Navigate through main pages.
 
-Expected Result:
-No critical errors appear in console.
+Expected Result: No critical errors in console.
 
 Priority: Medium
-Type: Technical
+Status: ✅ Pass
+
+
+Хочеш одразу оформимо його у форматі для GitHub?
